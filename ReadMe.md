@@ -10,7 +10,7 @@ A Web Application for securely managing a To Do List
 ## lab 31
 
 [pull request](https://github.com/hibasalem/todo-app-/pull/2)  
-[netlify](https://zealous-blackwell-84329a.netlify.app/)
+[netlify](https://adoring-cray-134ddc.netlify.app/)
 
 ![uml](./lab31.jpg)
 
