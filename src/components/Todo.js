@@ -3,6 +3,7 @@ import useForm from '../hooks/form.js';
 import List from './List';
 import { v4 as uuid } from 'uuid';
 import Form from './Form.js';
+import SettingsForm from './SettingsForm.js';
 
 const ToDo = () => {
   const [list, setList] = useState([]);
@@ -36,6 +37,7 @@ const ToDo = () => {
     let incompleteCount = list.filter((item) => !item.complete);
     setIncomplete(incompleteCount);
     document.title = `To Do List: ${incomplete.length}`;
+    // console.log('sdfjasld', list);
   }, [list]);
 
   return (
@@ -43,10 +45,8 @@ const ToDo = () => {
       <h2>{incomplete.length} items pending</h2>
 
       <div className="mainCards">
-        <Form
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
+        <Form handleChange={handleChange} handleSubmit={handleSubmit} />
+
         <List
           incomplete={incomplete}
           list={list}
