@@ -21,7 +21,7 @@ A Web Application for securely managing a To Do List
 - **_Phase 2_**:  Incorporate configuration settings to the application
 
 [pull request](https://github.com/hibasalem/todo-app-/pull/3)  
-[netlify](https://adoring-cray-134ddc.netlify.app/)
+[netlify](https://infallible-gates-fed185.netlify.app/)
 
 ![uml](./lab32.jpg)
 
