@@ -22,7 +22,9 @@ export default function List(props) {
         settings.itemsPerPage
       )
     );
-    console.log(activeList);
+    // console.log(activeList);
+    console.log(settings.itemsPerPage);
+
     setPagesNum(
       Math.ceil(
         (settings.show ? props.list : props.incomplete).length /
@@ -103,6 +105,7 @@ export default function List(props) {
             elevation={Elevation.THREE}
             key={item.id}
           >
+            {console.log(item)}
             <h3>
               <b>{item.text} </b>
             </h3>

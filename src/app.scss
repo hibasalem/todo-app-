@@ -7,6 +7,7 @@
   background-color: rgb(216, 216, 216);
   height: 100px;
   //   color: whitesmoke !important;
+  padding-top: 20px !important;
 
   .nav {
     margin-left: 300px;
@@ -37,6 +38,7 @@
     .mainItem {
       margin-bottom: 50px !important;
       float: left;
+      display: block;
     }
 
     .mainItem2 {
@@ -52,6 +54,13 @@
 
     .butns {
       margin-left: 400px !important;
+      clear: both;
     }
   }
+}
+
+.secItem {
+  margin-left: 140px !important;
+  // display: block;
+  width: 300px;
 }

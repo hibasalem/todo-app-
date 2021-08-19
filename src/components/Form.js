@@ -34,42 +34,6 @@ export default function Form({ handleSubmit, handleChange }) {
           <Button type="submit">Add Item</Button>
         </FormGroup>
       </form>
-
-      <form>
-        {/* <label>
-          <span>To Do Item</span>
-          <input
-            onChange={handleChange}
-            name="text"
-            type="text"
-            placeholder="Item Details"
-          />
-        </label> */}
-
-        {/* <label>
-          <span>Assigned To</span>
-          <input
-            onChange={handleChange}
-            name="assignee"
-            type="text"
-            placeholder="Assignee Name"
-          />
-        </label> */}
-        {/* 
-        <label>
-          <span>Difficulty</span>
-          <input
-            onChange={handleChange}
-            defaultValue={3}
-            type="range"
-            min={1}
-            max={5}
-            name="difficulty"
-          />
-        </label> */}
-
-        <label></label>
-      </form>
     </Card>
   );
 }

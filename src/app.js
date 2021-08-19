@@ -11,15 +11,16 @@ export default class App extends React.Component {
   render() {
     return (
       <SettingsContext>
-        <Header />
         <BrowserRouter>
+          <Header />
           <Switch>
             <Route exact path="/">
               <ToDo />
-            </Route>
-            <Route exact path="/settings">
               <SettingsForm />
             </Route>
+            {/* <Route exact path="/settings">
+              <SettingsForm />
+            </Route> */}
           </Switch>
         </BrowserRouter>
       </SettingsContext>
