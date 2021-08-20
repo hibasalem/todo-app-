@@ -18,9 +18,9 @@ export default class App extends React.Component {
               <ToDo />
               <SettingsForm />
             </Route>
-            {/* <Route exact path="/settings">
+            <Route exact path="/settings">
               <SettingsForm />
-            </Route> */}
+            </Route>
           </Switch>
         </BrowserRouter>
       </SettingsContext>
