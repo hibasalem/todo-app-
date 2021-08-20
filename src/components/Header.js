@@ -12,9 +12,9 @@ export default function Header() {
           <Link to="/" className="names">
             Home
           </Link>
-          {/* <Link to="/settings" className="names">
+          <Link to="/settings" className="names">
             settings
-          </Link> */}
+          </Link>
         </Nav>
       </Navbar>
     </div>
