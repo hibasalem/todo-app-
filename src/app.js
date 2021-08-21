@@ -19,14 +19,10 @@ export default class App extends React.Component {
             <Switch>
               <Route exact path="/">
                 <ToDo />
-                <Auth capability="update">
-                  <SettingsForm />
-                </Auth>
+                <SettingsForm />
               </Route>
               <Route exact path="/settings">
-                <Auth capability="update">
-                  <SettingsForm />
-                </Auth>
+                <SettingsForm />
               </Route>
             </Switch>
           </BrowserRouter>

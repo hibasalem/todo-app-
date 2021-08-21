@@ -49,7 +49,16 @@ export default function Login() {
         <Then>
           <div>
             <Card>
-              <h3>Log in</h3>
+              <If condition={active == 'signup'}>
+                <Then>
+                  <h3>Sign up</h3>
+                </Then>
+
+                <Else>
+                  <h3>Log in</h3>
+                </Else>
+              </If>
+
               <form onSubmit={handleSubmit}>
                 <FormGroup labelFor="text-input">
                   <Label>
