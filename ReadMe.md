@@ -38,10 +38,10 @@ getting started :
 * sign up and choose a role 
 * log in 
 * components will be rendered based on the role as the following: 
-    * **admin** : read , create , update , delete .  ( use this user for testing name : `aa1` password : `0000` )
-    * **editor** : read , create , update . ( use this user for testing name : `aa2` password : `0000` )
-    * **creater** : read , create . ( use this user for testing name : `aa333` password : `0000` )
-    * **user** : read . ( use this user for testing name : `aa4` password : `0000` )
+    * **admin** : read , create , update , delete .
+    * **editor** : read , create , update .
+    * **creater** : read , create .
+    * **user** : read . 
 
 ![uml](./lab33.jpg)
 
