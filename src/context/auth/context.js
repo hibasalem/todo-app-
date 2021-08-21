@@ -60,6 +60,7 @@ export default function context(props) {
       validateToken(response.body.token);
     } catch (error) {
       console.error(error.message);
+      alert(error.message);
     }
   };
 
