@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@blueprintjs/core": "^3.47.0",
+    "axios": "^0.21.1",
     "base-64": "^1.0.0",
     "bootstrap": "^5.1.0",
     "cors": "^2.8.5",
