@@ -93,7 +93,7 @@ export default function Login() {
                             <option defaultValue>Select role..</option>
                             <option value="admin">Admin</option>
                             <option value="editor">Editor</option>
-                            <option value="creator">Creator</option>
+                            <option value="writer">Writer</option>
                             <option value="user"> User</option>
                           </select>
                         </div>
