@@ -39,7 +39,7 @@ getting started :
 * log in 
 * components will be rendered based on the role as the following: 
     * **user** : read . ( use this user for testing name : `aa4` password : `0000` )
-    * **creater** : read , create . ( use this user for testing name : `aa1` password : `0000` )
+    * **creater** : read , create . ( use this user for testing name : `aa333` password : `0000` )
     * **editor** : read , create , update . ( use this user for testing name : `aa2` password : `0000` )
     * **admin** : read , create , update , delete .  ( use this user for testing name : `aa1` password : `0000` )
 
