@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import useForm from '../hooks/form.js';
 import List from './List';
 import { v4 as uuid } from 'uuid';
-import Form from './Form.js';
-import SettingsForm from './SettingsForm.js';
+import Form from './Form.jsx';
+import Auth from './Auth.jsx';
+import Login from './Login.jsx';
+import { If, Else, Then } from 'react-if';
+import { AuthContext } from '../context/auth/context';
+import Logout from './Logout.jsx';
 
 const ToDo = () => {
   const [list, setList] = useState([]);
   const [incomplete, setIncomplete] = useState([]);
   const { handleChange, handleSubmit } = useForm(addItem);
+  const auth = useContext(AuthContext);
 
   function addItem(item) {
     console.log(item);
@@ -37,22 +42,38 @@ const ToDo = () => {
     let incompleteCount = list.filter((item) => !item.complete);
     setIncomplete(incompleteCount);
     document.title = `To Do List: ${incomplete.length}`;
-    // console.log('sdfjasld', list);
   }, [list]);
 
   return (
     <div className="mainsec">
-      <h2>{incomplete.length} items pending</h2>
+      <If condition={!auth.loggedIn}>
+        <Then>
+          <Login />
+        </Then>
+        <Else>
+          <Logout />
+        </Else>
+      </If>
+      <If condition={auth.loggedIn}>
+        <Then>
+          <Auth capability="read">
+            <h2>{incomplete.length} items pending</h2>
 
-      <div className="mainCards">
-        <Form handleChange={handleChange} handleSubmit={handleSubmit} />
+            <div className="mainCards">
+              <Auth capability="update">
+                <Form handleChange={handleChange} handleSubmit={handleSubmit} />
+              </Auth>
 
-        <List
-          incomplete={incomplete}
-          list={list}
-          toggleComplete={toggleComplete}
-        />
-      </div>
+              <List
+                incomplete={incomplete}
+                list={list}
+                toggleComplete={toggleComplete}
+                deleteItem={deleteItem}
+              />
+            </div>
+          </Auth>
+        </Then>
+      </If>
     </div>
   );
 };

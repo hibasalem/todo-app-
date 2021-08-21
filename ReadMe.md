@@ -18,11 +18,22 @@ A Web Application for securely managing a To Do List
 
 ## lab 32
 
-- **_Phase 2_**:  Incorporate configuration settings to the application
+- **_Phase 2_**: Incorporate configuration settings to the application
 
 [pull request](https://github.com/hibasalem/todo-app-/pull/3)  
 [netlify](https://infallible-gates-fed185.netlify.app/)
 
 ![uml](./lab32.jpg)
+
+---
+
+## lab 33
+
+- **_Phase 2_**: Adding security and access controls to the application.
+
+[pull request](https://github.com/hibasalem/todo-app-/pull/4)  
+[netlify](https://infallible-gates-fed185.netlify.app/)
+
+![uml](./lab33.jpg)
 
 ---

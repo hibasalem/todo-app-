@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { settingsContext } from '../context/settings/context';
 import { Button, Card, Elevation } from '@blueprintjs/core';
+import Auth from './Auth';
 
 export default function List(props) {
   const settings = useContext(settingsContext);
@@ -115,17 +116,29 @@ export default function List(props) {
             <p>
               <b>Difficulty</b> : {item.difficulty}
             </p>
-            <Button
-              class="@ns-button"
-              type="button"
-              // intent="danger"
-              className={
-                item.complete ? 'bp3-intent-success' : 'bp3-intent-danger'
-              }
-              onClick={() => props.toggleComplete(item.id)}
-            >
-              Complete : {item.complete.toString()}
-            </Button>
+            <Auth capability="update">
+              <Button
+                class="@ns-button"
+                type="button"
+                className={
+                  item.complete ? 'bp3-intent-success' : 'bp3-intent-danger'
+                }
+                onClick={() => props.toggleComplete(item.id)}
+              >
+                Complete : {item.complete.toString()}
+              </Button>
+            </Auth>
+
+            <Auth capability="delete">
+              <Button
+                class="@ns-button"
+                type="button"
+                intent="danger"
+                onClick={() => props.deleteItem(item.id)}
+              >
+                delete Item
+              </Button>
+            </Auth>
           </Card>
         ))}
       </Card>
