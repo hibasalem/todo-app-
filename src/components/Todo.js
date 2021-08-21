@@ -60,7 +60,7 @@ const ToDo = () => {
             <h2>{incomplete.length} items pending</h2>
 
             <div className="mainCards">
-              <Auth capability="update">
+              <Auth capability="create">
                 <Form handleChange={handleChange} handleSubmit={handleSubmit} />
               </Auth>
 
