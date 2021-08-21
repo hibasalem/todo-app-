@@ -80,6 +80,9 @@ export default function SettingsForm() {
           </div>
         </Auth>
       </Then>
+      <Else>
+        <h3>login to see the content</h3>
+      </Else>
     </If>
   );
 }
